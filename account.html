@@ -191,32 +191,78 @@
     </header>
     <!-- section header end -->
 
-    <!-- section register start -->
-    <section class="register">
-        <div class="col_right">
-            <h1 class="title_form">ثبت نام</h1>
-            <p class="desc_form">اگر قبلا ثبت نام کرده اید پس <a href="login.html">وارد</a> شوید</p>
-            <div class="form_box">
-                <form action="" class="form_register">
-                    <input type="text" placeholder="نام کاربری" />
-                    <input type="email" placeholder="ایمیل" />
-                    <input type="password" placeholder="رمز عبور" />
-                    <input type="password" placeholder="تکرار رمز عبور" />
-                    <div class="check_policy">
-                        <input type="checkbox" /> <span>تمام <a href="">قوانین </a>را می پذیرم</span>
+    <section class="account">
+      <div class="links_account">
+        <ul>
+          <li class="active" data-target="dashboard"><i class="fa fa-dashboard"></i> داشبورد</li>
+          <li data-target="order"><i class="fa fa-basket-shopping"></i> سفارشات</li>
+          <li data-target="info_account"><i class="fa fa-user-alt"></i> اطلاعات حساب</li>
+          <a href="login.html"><i class="fa fa-sign-out-alt"></i> خروج</a>
+        </ul>
+      </div>
+      <div class="pages_account">
+        <div class="page_account item_account" id="dashboard">
+          <h1 class="name_account">سلام کمیل یگانه</h1>
+          <p>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است
+          </p>
+        </div>
+        <div class="order_account item_account" id="order">
+            <h2>سفارشات شما</h2>
+            <div class="items_order">
+                <table class="table_order">
+                    <thead>
+                        <tr>
+                            <th>شناسه</th>
+                            <th>تاریخ</th>
+                            <th>قیمت</th>
+                            <th>وضعیت</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1357</td>
+                            <td>1400/11/02</td>
+                            <td>960,000 تومان</td>
+                            <td style="color: green;">انجام شده</td>
+                        </tr>
+                        <tr>
+                            <td>#5540</td>
+                            <td>1400/11/03</td>
+                            <td>500,000 تومان</td>
+                            <td style="color: rgb(6, 150, 175);">درحال انجام</td>
+                        </tr>
+                        <tr>
+                            <td>#1357</td>
+                            <td>1400/11/02</td>
+                            <td>960,000 تومان</td>
+                            <td style="color: red;">انجام نشد</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="info_account item_account" id="info_account">
+            <h2>تنظیمات حساب</h2>
+            <div class="setting_account">
+                <form action="">
+                    <div class="form_group">
+                        <input type="text" placeholder="نام" />
+                        <input type="text" placeholder="نام خانوادگی" />
                     </div>
-                    <input type="submit" class="submit_register" value="ثبت نام" />
+                    <input type="text" placeholder="نام نمایشی" />
+                    <input type="email" placeholder="ایمیل" />
+                    <input type="password" placeholder="رمزعبور فعلی" />
+                    <input type="password" placeholder="رمزعبور جدید" />
+                    <input type="password" placeholder="تکرار رمز عبور" />
+                    <input type="submit" class="submit_change" value="ثبت تغییرات" />
                 </form>
             </div>
         </div>
-        <div class="col_left">
-            <div class="socials_register">
-                <a href="#" class="register_facebook"><i class="fab fa-facebook"></i> ثبت نام با فیسبوک</a>
-                <a href="#" class="register_google"><i class="fab fa-google"></i> ثبت نام با جیمیل</a>
-            </div>
-        </div>
+      </div>
     </section>
-    <!-- section register end -->
 
     <!-- footer start -->
     <footer class="footer">

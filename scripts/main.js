@@ -33,6 +33,16 @@ var swiperAmazing = new Swiper(".amazing", {
   },
 });
 
+//  ===== swiper js - product_single
+var swiperProductSingle = new Swiper(".product_single", {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 
 // ===== text overflow - title products
 let titleProducts = document.querySelectorAll(".product_title a");
@@ -43,3 +53,44 @@ titleProducts.forEach((e) => {
     e.innerHTML = text.substring(0, 60) + "...";
   }
 });
+
+
+// ===== click icon heart - favorites
+let hearts = document.querySelectorAll(".favorites i");
+hearts.forEach((e) => {
+  e.addEventListener("click", () => {
+    if (e.classList.contains("far")){
+      e.classList.remove("far");
+      e.classList.add("fa");
+    }else{
+      e.classList.add("far");
+      e.classList.remove("fa");
+    }
+  });
+});
+
+
+
+// ===== links myAccount page
+let linksAccount = document.querySelectorAll(".links_account ul li");
+let itemAccount = document.querySelectorAll(".item_account");
+
+linksAccount.forEach((e) => {
+  e.addEventListener("click", () => {
+    let targetTab = e.getAttribute("data-target");
+    disableLinks();
+    disableItemAccount();
+    e.classList.add("active");
+    document.getElementById(`${targetTab}`).style.display = "block";
+  });
+});
+const disableLinks = () => {
+  linksAccount.forEach((e) => {
+    e.classList.remove("active");
+  }); 
+}
+const disableItemAccount = () => {
+  itemAccount.forEach((e) => {
+    e.style.display = "none";
+  });
+}

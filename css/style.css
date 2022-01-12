@@ -53,7 +53,7 @@ del {
   font-size: 0.95rem;
 }
 
-/* ===== swiper js ===== */
+/* ===== flickity js ===== */
 .shape_title {
   position: absolute;
   top: -30%;
@@ -63,19 +63,18 @@ del {
   z-index: -1;
   opacity: 0.6;
 }
-.swiper-pagination {
-  z-index: 0 !important;
-}
-
-.swiper-button-next.swiper-button-disabled,
-.swiper-button-prev.swiper-button-disabled {
+.flickity-button:disabled {
   pointer-events: all !important;
 }
-/* ===== swiper js ===== */
+.flickity-slider{
+  right: 13px !important;
+}
+/* ===== flickity js ===== */
 
 .phone_products,
 .popular_products {
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 /* ===== header start ===== */
@@ -92,13 +91,13 @@ del {
   padding: 0.5rem 0;
 }
 .header_right {
+  width: 65%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-basis: 70%;
+  justify-content: flex-start;
+  align-items: center;;
 }
 .header_right .logo {
-  flex-basis: 20%;
+  margin-left: 2rem;
 }
 .header_right .logo img {
   max-width: 90%;
@@ -139,7 +138,6 @@ form .btn_search .fa-search {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-basis: 30%;
 }
 .header_left .cart,
 .header_left .user_account {
@@ -327,6 +325,16 @@ form .btn_search .fa-search {
   justify-content: space-between;
   align-items: center;
 }
+.header_bottom.sticky{
+  width: 100%;
+  position: fixed;
+  top: 0; right: 0;
+  background-color: #fff;
+  border-bottom: 2px dashed var(--color-green-light);
+  padding: 1rem;
+  box-shadow: 0 10px 30px 2px rgba(121, 121, 121, 0.205);
+  z-index: 1000;
+}
 .categories {
   position: relative;
 }
@@ -388,8 +396,17 @@ form .btn_search .fa-search {
   max-width: 30px;
   margin-left: 1rem;
 }
-.nav {
-  flex-basis: 77%;
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.nav .fa-bars{
+  display: none;
+  cursor: pointer;
+  margin-right: 1.7rem;
+  font-size: 1.6rem;
+  color: var(--color-gray-dark);
+  padding: .4rem;
 }
 .nav ul {
   display: flex;
@@ -446,54 +463,31 @@ form .btn_search .fa-search {
   justify-content: space-between;
   padding: 2rem 1rem;
 }
-.swiper {
+.carousel_slider {
   width: 70%;
   max-height: 70vh;
 }
-.swiper-slide {
-  border-radius: 20px;
-  overflow: hidden;
-  text-align: center;
-  font-size: 18px;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.swiper-slide img {
+.carousel-cell img {
   border-radius: 20px;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.swiper-button-next,
-.swiper-button-prev {
-  background-color: var(--color-gray-dark);
-  width: 50px !important;
-  height: 50px !important;
+.flickity-button {
+  background-color: var(--color-gray-dark) !important;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50%;
   transition: all 0.2s ease-out;
 }
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.flickity-button-icon {
   color: #fff;
   font-size: 1.8rem !important;
   transition: all 0.2s ease-out;
 }
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: var(--color-green);
+.flickity-button:hover .flickity-button-icon{
+  color: var(--color-green);
 }
 .swiper-button-next:hover::after,
 .swiper-button-prev:hover::after {
@@ -538,33 +532,33 @@ form .btn_search .fa-search {
 /* sliders */
 
 /* popular_products */
-.popular_products .title_section h2 {
+.section_products .title_section h2 {
   position: relative;
+  margin-bottom: 2rem;
 }
 .products {
   width: 100%;
-  margin-top: 2rem;
 }
-.products .swiper-wrapper {
-  padding: 1rem;
-}
-.products .swiper-slide {
-  width: 100px;
-  height: 360px;
+.products .carousel-cell {
+  width: 260px;
+  min-height: 350px;
   box-shadow: 0 0 10px 1px rgba(121, 121, 121, 0.205);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
+  margin: 0 1rem;
+  border-radius: 20px;
 }
-.swiper-slide .off_price {
+.carousel-cell .off_price {
   position: absolute;
   top: 0;
-  left: -5px;
+  left: 0;
   width: 60px;
   background-color: rgb(228, 62, 62);
   border-radius: 20px 0 20px 0;
+  text-align: center;
 }
 .off_price span {
   font-size: 0.9rem;
@@ -581,7 +575,7 @@ form .btn_search .fa-search {
 }
 .product_info {
   width: 100%;
-  min-height: 140px;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -653,13 +647,12 @@ form .btn_search .fa-search {
 
 /* amazing products */
 .amazing_products {
-  padding: 1rem;
   display: flex;
   align-items: center;
 }
 .amazing_products .banner_amazing {
   padding: 2rem;
-  width: 20%;
+  width: 300px;
   background-color: crimson;
   border-radius: 8px;
 }
@@ -669,6 +662,11 @@ form .btn_search .fa-search {
 .amazing_items {
   margin-top: 0;
   width: 80%;
+}
+.title_section_amazing{
+  position: relative;
+  margin-bottom: 1rem;
+  display: none;
 }
 /* amazing products */
 
@@ -862,25 +860,25 @@ form .btn_search .fa-search {
 .product{
   margin: 2rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
-.product .products{
+.product .main-carousel{
   margin-top: 0;
 }
-.product .swiper{
-  width: 50%;
+.product .main-carousel{
+  width: 25%;
   margin: 0;
   padding-left:2rem;
 }
-.product_single {
-  display: flex;
-  align-items: center;
+.single_carousel .carousel-cell{
+  width: 100%;
 }
 .desc_product{
-  width: 45%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-right: 1rem;
 }
 .product .product_image a {
   display: flex;
@@ -1317,3 +1315,45 @@ form .btn_search .fa-search {
   cursor: pointer;
 }
 /* my_account page */
+
+
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  .header_right{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .sliders .banner{
+    display: none;
+  }
+  .swiper{
+    width: 100%;
+  }
+  .amazing_products .banner_amazing{
+    display: none;
+  }
+  .title_section_amazing{
+    display: block;
+  }
+  .amazing_products {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav ul{
+    display: none;
+  }
+  .nav .fa-bars{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .products .swiper-slide{
+    max-width: 300px !important;
+  }
+}

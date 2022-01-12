@@ -15,10 +15,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- swiper js -->
+    <!-- flickity js -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
   </head>
   <body>
@@ -121,64 +121,67 @@
         </div>
       </div>
       <div class="header_bottom">
-        <div class="categories">
-          <button class="btn_categories">
-            دسته بندی ها <i class="fa fa-chevron-down"></i>
-          </button>
-          <div class="categories_dropdown">
+        <div class="navbar">
+          <div class="categories">
+            <button class="btn_categories">
+              دسته بندی ها <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="categories_dropdown">
+              <ul>
+                <li>
+                  <a href="#">
+                    <img src="images/clothing.png" alt="clothing" />
+                    مد و پوشاک
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/heart.png" alt="heart" />
+                    زیبایی و سلامتی
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/armchair.png" alt="sofa" />
+                    خانه و آشپزخانه
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/laptop.png" alt="digital" />
+                    کالای دیجیتال
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/bunny.png" alt="toy" />
+                    اسباب بازی
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/stationery.png" alt="stationery" />
+                    لوازم تحریر
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <nav class="nav">
             <ul>
-              <li>
-                <a href="#">
-                  <img src="images/clothing.png" alt="clothing" />
-                  مد و پوشاک
-                </a>
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">خانه</a>
               </li>
-              <li>
-                <a href="#">
-                  <img src="images/heart.png" alt="heart" />
-                  زیبایی و سلامتی
-                </a>
+              <li class="nav-item">
+                <a href="about_us.html" class="nav-link">درباره ما</a>
               </li>
-              <li>
-                <a href="#">
-                  <img src="images/armchair.png" alt="sofa" />
-                  خانه و آشپزخانه
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/laptop.png" alt="digital" />
-                  کالای دیجیتال
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/bunny.png" alt="toy" />
-                  اسباب بازی
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/stationery.png" alt="stationery" />
-                  لوازم تحریر
-                </a>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">تماس با ما</a>
               </li>
             </ul>
-          </div>
+            <i class="fa fa-bars"></i>
+          </nav>
         </div>
-        <nav class="nav">
-          <ul>
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">خانه</a>
-            </li>
-            <li class="nav-item">
-              <a href="about_us.html" class="nav-link">درباره ما</a>
-            </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">تماس با ما</a>
-            </li>
-          </ul>
-        </nav>
         <div class="hotline">
           <i class="fa fa-headphones"></i>
           <p class="hotline_text">پشتیبانی 24/7</p>
@@ -190,29 +193,17 @@
     <!-- section main start -->
     <main>
       <section class="sliders">
-        <div class="swiper swiper_slider">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <img src="images/slider-3.jpg" alt="slider" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider-2.gif" alt="slider" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider-1.jpg" alt="slider" />
-            </div>
+        <div class="main-carousel carousel_slider">
+          <!-- Slides -->
+          <div class="carousel-cell">
+            <img src="images/slider-3.jpg" alt="slider" />
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
+          <div class="carousel-cell">
+            <img src="images/slider-2.gif" alt="slider" />
+          </div>
+          <div class="carousel-cell">
+            <img src="images/slider-1.jpg" alt="slider" />
+          </div>
         </div>
         <div class="banner">
           <img src="images/banner-11.png" alt="banner" />
@@ -222,195 +213,212 @@
         </div>
       </section>
 
-      <section class="amazing_products">
+      <section class="amazing_products section_products">
         <div class="banner_amazing">
           <img src="images/banner-of.png" alt="" />
         </div>
-        <div class="amazing_items products swiper">
-          <div class="swiper_products amazing">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%12</span>
-                </div>
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img src="images/products/phones/phone-2.jpg" alt="phone" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">گوشی موبایل اپل مدل 13Pro Max</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>45,700,000</del>
-                      <span class="price">44,500,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
+        <div class="title_section title_section_amazing">
+          <h2>
+            پیشنهادات شگفت انگیز
+            <svg
+              class="shape_title"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#BCE3C9"
+                d="M43.5,-71.5C53.2,-61.4,55.8,-44.1,61.7,-28.9C67.5,-13.7,76.5,-0.7,74.9,10.8C73.2,22.2,60.9,32.2,49.8,40.7C38.6,49.2,28.6,56.3,17.6,59.2C6.6,62.1,-5.5,60.9,-20.9,61C-36.3,61.1,-55.1,62.6,-63.3,54.2C-71.4,45.9,-68.9,27.7,-68.4,11.7C-67.9,-4.4,-69.3,-18.4,-64.5,-29.6C-59.6,-40.9,-48.4,-49.4,-36.6,-58.6C-24.8,-67.7,-12.4,-77.5,2.2,-80.9C16.9,-84.4,33.8,-81.6,43.5,-71.5Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </h2>
+        </div>
+        <div class="products main-carousel amazing_carousel">
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%12</span>
+            </div>
+            <div class="product_image">
+              <a href="product_single.html">
+                <img src="images/products/phones/phone-2.jpg" alt="phone" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html">گوشی موبایل اپل مدل 13Pro Max</a>
               </div>
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%57</span>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>45,700,000</del>
+                  <span class="price">44,500,000 تومان</span>
                 </div>
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img
-                      src="images/products/amazing/amazing-1.jpg"
-                      alt="amazing"
-                    />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">کیف رودوشی زنانه چرم</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>2,398,000</del>
-                      <span class="price">1,031,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%56</span>
-                </div>
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img src="images/products/amazing/bag-1.jpg" alt="bag" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">ساک ورزشی گوگانا مدل gog2030</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>610,000</del>
-                      <span class="price">269,900 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%25</span>
-                </div>
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img src="images/products/amazing/book-1.jpg" alt="book" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">کتاب معامله گر پرایس اکشن اثر لنس بگز انتشارات کاسپین دانش</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>450,000</del>
-                      <span class="price">337,500 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%14</span>
-                </div>
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img src="images/products/amazing/hard-1.jpg" alt="hard" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="#">هارددیسک اکسترنال سیلیکون پاور مدل Armor A30 ظرفیت 2 ترابایت</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>2,547,000</del>
-                      <span class="price">2,199,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%57</span>
-                </div>
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img
-                      src="images/products/amazing/amazing-1.jpg"
-                      alt="amazing"
-                    />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">کیف رودوشی زنانه چرم</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>2,398,000</del>
-                      <span class="price">1,031,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%55</span>
-                </div>
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img src="images/products/amazing/hoody.jpg" alt="hoody" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">هودی مردانه دیجی استایل اسنشیال مدل 18311005970</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>867,000</del>
-                      <span class="price">390,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
               </div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+          </div>
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%57</span>
+            </div>
+            <div class="product_image">
+              <a href="product_single.html">
+                <img
+                  src="images/products/amazing/amazing-1.jpg"
+                  alt="amazing"
+                />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html">کیف رودوشی زنانه چرم</a>
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>2,398,000</del>
+                  <span class="price">1,031,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%56</span>
+            </div>
+            <div class="product_image">
+              <a href="product_single.html">
+                <img src="images/products/amazing/bag-1.jpg" alt="bag" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html">ساک ورزشی گوگانا مدل gog2030</a>
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>610,000</del>
+                  <span class="price">269,900 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%25</span>
+            </div>
+            <div class="product_image">
+              <a href="product_single.html">
+                <img src="images/products/amazing/book-1.jpg" alt="book" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html"
+                  >کتاب معامله گر پرایس اکشن اثر لنس بگز انتشارات کاسپین دانش</a
+                >
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>450,000</del>
+                  <span class="price">337,500 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%14</span>
+            </div>
+            <div class="product_image">
+              <a href="product_single.html">
+                <img src="images/products/amazing/hard-1.jpg" alt="hard" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="#"
+                  >هارددیسک اکسترنال سیلیکون پاور مدل Armor A30 ظرفیت 2
+                  ترابایت</a
+                >
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>2,547,000</del>
+                  <span class="price">2,199,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%57</span>
+            </div>
+            <div class="product_image">
+              <a href="product_single.html">
+                <img
+                  src="images/products/amazing/amazing-1.jpg"
+                  alt="amazing"
+                />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html">کیف رودوشی زنانه چرم</a>
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>2,398,000</del>
+                  <span class="price">1,031,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%55</span>
+            </div>
+            <div class="product_image">
+              <a href="product_single.html">
+                <img src="images/products/amazing/hoody.jpg" alt="hoody" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html"
+                  >هودی مردانه دیجی استایل اسنشیال مدل 18311005970</a
+                >
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>867,000</del>
+                  <span class="price">390,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="popular_products">
+      <section class="popular_products section_products">
         <div class="title_section">
           <h2>
             محصولات محبوب
@@ -427,145 +435,144 @@
             </svg>
           </h2>
         </div>
-        <div class="products swiper">
-          <div class="swiper_products">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img src="images/products/shoes-1.jpg" alt="shoes" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">کفش زنانه مدل AIR1</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <span class="price">120,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
+        <div class="products main-carousel popular_carousel">
+          <div class="carousel-cell">
+            <div class="product_image">
+              <a href="product_single.html">
+                <img src="images/products/shoes-1.jpg" alt="shoes" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html">کفش زنانه مدل AIR1</a>
               </div>
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%12</span>
+              <div class="product_item">
+                <div class="product_price">
+                  <span class="price">120,000 تومان</span>
                 </div>
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img src="images/products/phone-1.jpg" alt="phone" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">گوشی موبایل اپل مدل 13Pro Max</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>45,700,000</del>
-                      <span class="price">44,500,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%4</span>
-                </div>
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img src="images/products/headphone.jpg" alt="headphone" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">هدفون بلوتوثی لیتو</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>450,000</del>
-                      <span class="price">430,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img src="images/products/laptop-1.jpg" alt="laptop" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">لپ تاپ 14 اینچی ایسوس مدل ZenBook</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <span class="price">25,780,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%74</span>
-                </div>
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img src="images/products/book-1.jpg" alt="book" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">کتاب معجزه شکرگزاری اثر راندا برن</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>99,000</del>
-                      <span class="price">26,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product_image">
-                  <a href="product_single.html">
-                    <img src="images/products/laptop-2.jpg" alt="laptop" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="product_single.html">لپ تاپ 15 اینچی مایکروسافت مدل surface</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <span class="price">93,780,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+          </div>
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%12</span>
+            </div>
+            <div class="product_image">
+              <a href="product_single.html">
+                <img src="images/products/phone-1.jpg" alt="phone" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html">گوشی موبایل اپل مدل 13Pro Max</a>
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>45,700,000</del>
+                  <span class="price">44,500,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%4</span>
+            </div>
+            <div class="product_image">
+              <a href="product_single.html">
+                <img src="images/products/headphone.jpg" alt="headphone" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html">هدفون بلوتوثی لیتو</a>
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>450,000</del>
+                  <span class="price">430,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="product_image">
+              <a href="product_single.html">
+                <img src="images/products/laptop-1.jpg" alt="laptop" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html"
+                  >لپ تاپ 14 اینچی ایسوس مدل ZenBook</a
+                >
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <span class="price">25,780,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%74</span>
+            </div>
+            <div class="product_image">
+              <a href="product_single.html">
+                <img src="images/products/book-1.jpg" alt="book" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html"
+                  >کتاب معجزه شکرگزاری اثر راندا برن</a
+                >
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>99,000</del>
+                  <span class="price">26,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="product_image">
+              <a href="product_single.html">
+                <img src="images/products/laptop-2.jpg" alt="laptop" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="product_single.html"
+                  >لپ تاپ 15 اینچی مایکروسافت مدل surface</a
+                >
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <span class="price">93,780,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -579,7 +586,7 @@
         </a>
       </section>
 
-      <section class="phone_products">
+      <section class="phone_products section_products">
         <div class="title_section">
           <h2>
             گوشی موبایل
@@ -596,10 +603,8 @@
             </svg>
           </h2>
         </div>
-        <div class="products swiper">
-          <div class="swiper_products">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
+        <div class="products main-carousel phone_carousel">
+              <div class="carousel-cell">
                 <div class="product_image">
                   <a href="product_single.html">
                     <img src="images/products/phones/phone-1.jpg" alt="phone" />
@@ -607,7 +612,9 @@
                 </div>
                 <div class="product_info">
                   <div class="product_title">
-                    <a href="product_single.html">گوشی موبایل شیائومی مدل POCO X3 Pro </a>
+                    <a href="product_single.html"
+                      >گوشی موبایل شیائومی مدل POCO X3 Pro
+                    </a>
                   </div>
                   <div class="product_item">
                     <div class="product_price">
@@ -619,7 +626,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="carousel-cell">
                 <div class="off_price">
                   <span>%12</span>
                 </div>
@@ -630,7 +637,9 @@
                 </div>
                 <div class="product_info">
                   <div class="product_title">
-                    <a href="product_single.html">گوشی موبایل اپل مدل 13Pro Max</a>
+                    <a href="product_single.html"
+                      >گوشی موبایل اپل مدل 13Pro Max</a
+                    >
                   </div>
                   <div class="product_item">
                     <div class="product_price">
@@ -643,7 +652,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="carousel-cell">
                 <div class="off_price">
                   <span>%6</span>
                 </div>
@@ -654,7 +663,9 @@
                 </div>
                 <div class="product_info">
                   <div class="product_title">
-                    <a href="product_single.html">گوشی موبایل اپل مدل iPhone 13 A2634</a>
+                    <a href="product_single.html"
+                      >گوشی موبایل اپل مدل iPhone 13 A2634</a
+                    >
                   </div>
                   <div class="product_item">
                     <div class="product_price">
@@ -667,7 +678,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="carousel-cell">
                 <div class="product_image">
                   <a href="product_single.html">
                     <img src="images/products/phones/phone-4.jpg" alt="phone" />
@@ -676,7 +687,9 @@
                 <div class="product_info">
                   <div class="product_title">
                     <a href="product_single.html"
-                      >گوشی موبایل سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS گوشی موبایل سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS گوشی موبایل سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS</a
+                      >گوشی موبایل سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS گوشی
+                      موبایل سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS گوشی
+                      موبایل سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS</a
                     >
                   </div>
                   <div class="product_item">
@@ -689,7 +702,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="carousel-cell">
                 <div class="off_price">
                   <span>%2</span>
                 </div>
@@ -700,7 +713,9 @@
                 </div>
                 <div class="product_info">
                   <div class="product_title">
-                    <a href="product_single.html">گوشی موبایل شیائومی مدل Poco X3 GT</a>
+                    <a href="product_single.html"
+                      >گوشی موبایل شیائومی مدل Poco X3 GT</a
+                    >
                   </div>
                   <div class="product_item">
                     <div class="product_price">
@@ -713,7 +728,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="carousel-cell">
                 <div class="product_image">
                   <a href="product_single.html">
                     <img src="images/products/phones/phone-6.jpg" alt="phone" />
@@ -735,7 +750,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="carousel-cell">
                 <div class="product_image">
                   <a href="product_single.html">
                     <img src="images/products/phones/phone-7.jpg" alt="phone" />
@@ -743,7 +758,9 @@
                 </div>
                 <div class="product_info">
                   <div class="product_title">
-                    <a href="product_single.html">گوشی موبایل سامسونگ مدل A52s 5G SM-A528B/DS</a>
+                    <a href="product_single.html"
+                      >گوشی موبایل سامسونگ مدل A52s 5G SM-A528B/DS</a
+                    >
                   </div>
                   <div class="product_item">
                     <div class="product_price">
@@ -755,11 +772,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
         </div>
       </section>
 
@@ -771,7 +783,6 @@
           <img src="images/banner-4.jpg" alt="banner" />
         </a>
       </section>
-
     </main>
     <!-- section main end -->
 
@@ -828,15 +839,15 @@
           <div class="items_link">
             <h4>از طریق زیر برنامه ما را دانلود و نصب کنید</h4>
             <a href="#"><img src="images/app-store.jpg" alt="app-store" /></a>
-            <a href="#"><img src="images/google-play.jpg" alt="google-play" /></a>
+            <a href="#"
+              ><img src="images/google-play.jpg" alt="google-play"
+            /></a>
           </div>
         </div>
       </div>
       <div class="footer_bottom">
         <div class="copyright">
-          <p>کلیه حقوق 
-            این سایت متعلق به فروشگاه اینترنتی ارزان می باشد.
-          </p>
+          <p>کلیه حقوق این سایت متعلق به فروشگاه اینترنتی ارزان می باشد.</p>
         </div>
         <div class="socials">
           <a href="#"><i class="fab fa-telegram"></i></a>
@@ -849,7 +860,7 @@
     <!-- footer end -->
 
     <!-- script js -->
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

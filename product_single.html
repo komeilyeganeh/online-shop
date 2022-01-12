@@ -15,10 +15,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- swiper js -->
+    <!-- flickity js -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
   </head>
   <body>
@@ -103,86 +103,85 @@
             </div>
           </div>
           <div class="user_account">
-            <!-- <i class="fa fa-user"></i>
+            <i class="fa fa-user"></i>
             <div class="user_dropdown">
               <ul class="user_link">
                 <li>
                   <i class="fa fa-user-alt icon_user"></i>
-                  <a href="#">حساب من</a>
-                </li>
-                <li>
-                  <i class="fa fa-cog icon_user"></i>
-                  <a href="#">تنظیمات</a>
+                  <a href="account.html">حساب من</a>
                 </li>
                 <li>
                   <i class="fa fa-sign-out-alt icon_user"></i>
                   <a href="#">خروج</a>
                 </li>
               </ul>
-            </div> -->
-            <a href="register.html" class="register_login">ثبت نام / ورود</a>
+            </div>
+            <!-- <a href="register.html" class="register_login">ثبت نام / ورود</a> -->
           </div>
         </div>
       </div>
       <div class="header_bottom">
-        <div class="categories">
-          <button class="btn_categories">
-            دسته بندی ها <i class="fa fa-chevron-down"></i>
-          </button>
-          <div class="categories_dropdown">
+        <div class="navbar">
+          <div class="categories">
+            <button class="btn_categories">
+              دسته بندی ها <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="categories_dropdown">
+              <ul>
+                <li>
+                  <a href="#">
+                    <img src="images/clothing.png" alt="clothing" />
+                    مد و پوشاک
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/heart.png" alt="heart" />
+                    زیبایی و سلامتی
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/armchair.png" alt="sofa" />
+                    خانه و آشپزخانه
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/laptop.png" alt="digital" />
+                    کالای دیجیتال
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/bunny.png" alt="toy" />
+                    اسباب بازی
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/stationery.png" alt="stationery" />
+                    لوازم تحریر
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <nav class="nav">
             <ul>
-              <li>
-                <a href="#">
-                  <img src="images/clothing.png" alt="clothing" />
-                  مد و پوشاک
-                </a>
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">خانه</a>
               </li>
-              <li>
-                <a href="#">
-                  <img src="images/heart.png" alt="heart" />
-                  زیبایی و سلامتی
-                </a>
+              <li class="nav-item">
+                <a href="about_us.html" class="nav-link">درباره ما</a>
               </li>
-              <li>
-                <a href="#">
-                  <img src="images/armchair.png" alt="sofa" />
-                  خانه و آشپزخانه
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/laptop.png" alt="digital" />
-                  کالای دیجیتال
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/bunny.png" alt="toy" />
-                  اسباب بازی
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/stationery.png" alt="stationery" />
-                  لوازم تحریر
-                </a>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">تماس با ما</a>
               </li>
             </ul>
-          </div>
+            <i class="fa fa-bars"></i>
+          </nav>
         </div>
-        <nav class="nav">
-          <ul>
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">خانه</a>
-            </li>
-            <li class="nav-item">
-              <a href="about_us.html" class="nav-link">درباره ما</a>
-            </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">تماس با ما</a>
-            </li>
-          </ul>
-        </nav>
         <div class="hotline">
           <i class="fa fa-headphones"></i>
           <p class="hotline_text">پشتیبانی 24/7</p>
@@ -193,39 +192,27 @@
 
     <main>
       <section class="product">
-        <div class="swiper products">
-          <div class="swiper_products product_single">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="product_image">
-                  <a href="">
-                    <img src="images/products/phones/phone-1.jpg" alt="phone" />
-                  </a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product_image">
-                  <a href="">
-                    <img
-                      src="images/products/phones/phone-1-1.jpg"
-                      alt="phone"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product_image">
-                  <a href="">
-                    <img
-                      src="images/products/phones/phone-1-2.jpg"
-                      alt="phone"
-                    />
-                  </a>
-                </div>
-              </div>
+        <div class="main-carousel products single_carousel">
+          <div class="carousel-cell">
+            <div class="product_image">
+              <a href="">
+                <img src="images/products/phones/phone-1.jpg" alt="phone" />
+              </a>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+          </div>
+          <div class="carousel-cell">
+            <div class="product_image">
+              <a href="">
+                <img src="images/products/phones/phone-1-1.jpg" alt="phone" />
+              </a>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="product_image">
+              <a href="">
+                <img src="images/products/phones/phone-1-2.jpg" alt="phone" />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -252,7 +239,7 @@
             </p>
           </div>
           <div class="options_product">
-            <form action="">
+            <!-- <form action="">
               <span>سایز </span>
               <select name="" id="size_product">
                 <option value="xl">XL</option>
@@ -260,7 +247,7 @@
                 <option value="m">M</option>
                 <option value="s">S</option>
               </select>
-            </form>
+            </form> -->
           </div>
           <div class="buttons_product">
             <button class="add_to_cart">افزودن به سبد خرید</button>
@@ -306,105 +293,98 @@
             </svg>
           </h2>
         </div>
-        <div class="products swiper">
-          <div class="swiper_products">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="product_image">
-                  <a href="">
-                    <img src="images/products/phones/phone-1.jpg" alt="phone" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="#">گوشی موبایل شیائومی مدل POCO X3 Pro </a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <span class="price">120,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
+        <div class="products main-carousel related_product_carousel">
+          <div class="carousel-cell">
+            <div class="product_image">
+              <a href="">
+                <img src="images/products/phones/phone-1.jpg" alt="phone" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="#">گوشی موبایل شیائومی مدل POCO X3 Pro </a>
               </div>
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%12</span>
+              <div class="product_item">
+                <div class="product_price">
+                  <span class="price">120,000 تومان</span>
                 </div>
-                <div class="product_image">
-                  <a href="">
-                    <img src="images/products/phones/phone-2.jpg" alt="phone" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="#">گوشی موبایل اپل مدل 13Pro Max</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>45,700,000</del>
-                      <span class="price">44,500,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="off_price">
-                  <span>%6</span>
-                </div>
-                <div class="product_image">
-                  <a href="">
-                    <img src="images/products/phones/phone-3.jpg" alt="phone" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="#">گوشی موبایل اپل مدل iPhone 13 A2634</a>
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <del>28,300,000</del>
-                      <span class="price">26,498,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product_image">
-                  <a href="">
-                    <img src="images/products/phones/phone-4.jpg" alt="phone" />
-                  </a>
-                </div>
-                <div class="product_info">
-                  <div class="product_title">
-                    <a href="#"
-                      >گوشی موبایل سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS گوشی
-                      موبایل سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS گوشی
-                      موبایل سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS</a
-                    >
-                  </div>
-                  <div class="product_item">
-                    <div class="product_price">
-                      <span class="price">3,849,000 تومان</span>
-                    </div>
-                    <span class="add_cart">
-                      <i class="fa fa-cart-plus"></i>
-                    </span>
-                  </div>
-                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+          </div>
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%12</span>
+            </div>
+            <div class="product_image">
+              <a href="">
+                <img src="images/products/phones/phone-2.jpg" alt="phone" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="#">گوشی موبایل اپل مدل 13Pro Max</a>
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>45,700,000</del>
+                  <span class="price">44,500,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="off_price">
+              <span>%6</span>
+            </div>
+            <div class="product_image">
+              <a href="">
+                <img src="images/products/phones/phone-3.jpg" alt="phone" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="#">گوشی موبایل اپل مدل iPhone 13 A2634</a>
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <del>28,300,000</del>
+                  <span class="price">26,498,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="product_image">
+              <a href="">
+                <img src="images/products/phones/phone-4.jpg" alt="phone" />
+              </a>
+            </div>
+            <div class="product_info">
+              <div class="product_title">
+                <a href="#"
+                  >گوشی موبایل سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS گوشی
+                  موبایل سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS گوشی موبایل
+                  سامسونگ مدل Galaxy A12 Nacho SM-A127F/DS</a
+                >
+              </div>
+              <div class="product_item">
+                <div class="product_price">
+                  <span class="price">3,849,000 تومان</span>
+                </div>
+                <span class="add_cart">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -484,7 +464,7 @@
     <!-- footer end -->
 
     <!-- script js -->
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

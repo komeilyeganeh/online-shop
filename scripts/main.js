@@ -1,48 +1,49 @@
-// ===== swiper js - slider
-var swiperSlider = new Swiper(".swiper_slider", {
-  spaceBetween: 10,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+// ===== Flickity js - slider
+var flkty = new Flickity( '.carousel_slider', {
+  // options
+  pageDots: false,
+  rightToLeft: true
 });
 
-
-//  ===== swiper js - products
-var swiperProducts = new Swiper(".swiper_products", {
-  slidesPerView: 6,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+// ===== Flickity js - amazing products
+var flkty = new Flickity( '.amazing_carousel', {
+  // options
+  pageDots: false,
+  rightToLeft: true,
+  cellAlign: 'right'
 });
 
-//  ===== swiper js - amazing products
-var swiperAmazing = new Swiper(".amazing", {
-  slidesPerView: 5,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+// ===== Flickity js - popular products
+var flkty = new Flickity( '.popular_carousel', {
+  // options
+  pageDots: false,
+  rightToLeft: true,
+  cellAlign: 'right'
 });
 
-//  ===== swiper js - product_single
-var swiperProductSingle = new Swiper(".product_single", {
-  slidesPerView: 2,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+// ===== Flickity js - phone products
+var flkty = new Flickity( '.phone_carousel', {
+  // options
+  pageDots: false,
+  rightToLeft: true,
+  cellAlign: 'right'
 });
 
+// ===== Flickity js - single product page
+var flkty = new Flickity( '.single_carousel', {
+  // options
+  pageDots: false,
+  rightToLeft: true,
+  cellAlign: 'right'
+});
+
+// ===== Flickity js - related product
+var flkty = new Flickity( '.related_product_carousel', {
+  // options
+  pageDots: false,
+  rightToLeft: true,
+  cellAlign: 'right'
+});
 
 // ===== text overflow - title products
 let titleProducts = document.querySelectorAll(".product_title a");
@@ -54,22 +55,19 @@ titleProducts.forEach((e) => {
   }
 });
 
-
 // ===== click icon heart - favorites
 let hearts = document.querySelectorAll(".favorites i");
 hearts.forEach((e) => {
   e.addEventListener("click", () => {
-    if (e.classList.contains("far")){
+    if (e.classList.contains("far")) {
       e.classList.remove("far");
       e.classList.add("fa");
-    }else{
+    } else {
       e.classList.add("far");
       e.classList.remove("fa");
     }
   });
 });
-
-
 
 // ===== links myAccount page
 let linksAccount = document.querySelectorAll(".links_account ul li");
@@ -87,10 +85,22 @@ linksAccount.forEach((e) => {
 const disableLinks = () => {
   linksAccount.forEach((e) => {
     e.classList.remove("active");
-  }); 
-}
+  });
+};
 const disableItemAccount = () => {
   itemAccount.forEach((e) => {
     e.style.display = "none";
   });
-}
+};
+
+// ===== fixed navbar
+let navbar = document.querySelector(".header_bottom");
+let sticky = navbar.offsetTop;
+
+window.onscroll = () => {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+};

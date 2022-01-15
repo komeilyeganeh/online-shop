@@ -1,12 +1,22 @@
+// ===== loading page
+const preload = () => {
+  document.querySelector(".loading").classList.add("fade");
+  document.body.style.overflowX = "hidden"
+  document.body.style.overflowY = "auto";
+}
+setInterval(preload, 2000);
+
+
 // ===== Flickity js - slider
-var flkty = new Flickity( '.carousel_slider', {
+var flktySlider = new Flickity( '.carousel_slider', {
   // options
   pageDots: false,
-  rightToLeft: true
+  rightToLeft: true,
+  autoPlay: 4000
 });
 
 // ===== Flickity js - amazing products
-var flkty = new Flickity( '.amazing_carousel', {
+var flktyAmazing = new Flickity( '.amazing_carousel', {
   // options
   pageDots: false,
   rightToLeft: true,
@@ -14,7 +24,7 @@ var flkty = new Flickity( '.amazing_carousel', {
 });
 
 // ===== Flickity js - popular products
-var flkty = new Flickity( '.popular_carousel', {
+var flktyPopular = new Flickity( '.popular_carousel', {
   // options
   pageDots: false,
   rightToLeft: true,
@@ -22,7 +32,7 @@ var flkty = new Flickity( '.popular_carousel', {
 });
 
 // ===== Flickity js - phone products
-var flkty = new Flickity( '.phone_carousel', {
+var flktyPhone = new Flickity( '.phone_carousel', {
   // options
   pageDots: false,
   rightToLeft: true,
@@ -30,7 +40,7 @@ var flkty = new Flickity( '.phone_carousel', {
 });
 
 // ===== Flickity js - single product page
-var flkty = new Flickity( '.single_carousel', {
+var flktyProduct = new Flickity( '.single_carousel', {
   // options
   pageDots: false,
   rightToLeft: true,
@@ -38,7 +48,7 @@ var flkty = new Flickity( '.single_carousel', {
 });
 
 // ===== Flickity js - related product
-var flkty = new Flickity( '.related_product_carousel', {
+var flktyRelated = new Flickity( '.related_product_carousel', {
   // options
   pageDots: false,
   rightToLeft: true,

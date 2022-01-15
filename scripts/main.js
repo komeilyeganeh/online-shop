@@ -104,3 +104,20 @@ window.onscroll = () => {
     navbar.classList.remove("sticky");
   }
 };
+
+
+// ===== open/close menu in mobile
+let btnBars = document.querySelector(".btn_bars_menu");
+let menuMobile = document.querySelector(".nav ul");
+btnBars.addEventListener("click", () => {
+  if (menuMobile.classList.contains("active")){
+    btnBars.classList.remove("fa-times");
+    btnBars.classList.add("fa-bars");
+    menuMobile.classList.remove("active");
+  }else{
+    btnBars.classList.remove("fa-bars");
+    btnBars.classList.add("fa-times");
+    menuMobile.classList.add("active");
+  }
+  
+});

@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eCommerce</title>
-    <!-- link style file -->
-    <link rel="stylesheet" href="css/style.css" />
     <!-- fontawesome -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
     />
+    <!-- link style file -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- section header start -->
@@ -98,20 +98,22 @@
             </div>
           </div>
           <div class="user_account">
-            <i class="fa fa-user"></i>
-            <div class="user_dropdown">
-              <ul class="user_link">
-                <li>
-                  <i class="fa fa-user-alt icon_user"></i>
-                  <a href="account.html">حساب من</a>
-                </li>
-                <li>
-                  <i class="fa fa-sign-out-alt icon_user"></i>
-                  <a href="#">خروج</a>
-                </li>
-              </ul>
-            </div>
-            <!-- <a href="register.html" class="register_login">ثبت نام / ورود</a> -->
+            <!-- <div class="user_item">
+              <i class="fa fa-user"></i>
+              <div class="user_dropdown">
+                <ul class="user_link">
+                  <li>
+                    <i class="fa fa-user-alt icon_user"></i>
+                    <a href="account.html">حساب من</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-sign-out-alt icon_user"></i>
+                    <a href="#">خروج</a>
+                  </li>
+                </ul>
+              </div>
+            </div> -->
+            <a href="register.html" class="register_login"><i class="fas fa-sign-in-alt"></i></a>
           </div>
         </div>
       </div>
@@ -174,12 +176,96 @@
                 <a href="contact.html" class="nav-link">تماس با ما</a>
               </li>
             </ul>
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars btn_bars_menu"></i>
           </nav>
         </div>
         <div class="hotline">
           <i class="fa fa-headphones"></i>
           <p class="hotline_text">پشتیبانی 24/7</p>
+        </div>
+        <div class="user_cart_shopping">
+            <div class="cart">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="cart_count">3</span>
+              <div class="cart_dropdown">
+                <div class="cart_items">
+                  <div class="cart_item">
+                    <div class="item_image">
+                      <img src="images/thumbnail-3.jpg" alt="cart" />
+                    </div>
+                    <div class="text_item">
+                      <a href="" class="item_title">آبمیوه</a>
+                      <span class="price_item">42,000 * 1</span>
+                    </div>
+                    <span class="btn_remove_item"
+                      ><i class="fa fa-times"></i
+                    ></span>
+                  </div>
+                  <div class="cart_item">
+                    <div class="item_image">
+                      <img src="images/thumbnail-3.jpg" alt="cart" />
+                    </div>
+                    <div class="text_item">
+                      <a href="" class="item_title">آبمیوه</a>
+                      <span class="price_item">15,000 * 2</span>
+                    </div>
+                    <span class="btn_remove_item"
+                      ><i class="fa fa-times"></i
+                    ></span>
+                  </div>
+                  <div class="cart_item">
+                    <div class="item_image">
+                      <img src="images/thumbnail-3.jpg" alt="cart" />
+                    </div>
+                    <div class="text_item">
+                      <a href="" class="item_title">آبمیوه</a>
+                      <span class="price_item">15,000 * 2</span>
+                    </div>
+                    <span class="btn_remove_item"
+                      ><i class="fa fa-times"></i
+                    ></span>
+                  </div>
+                  <div class="cart_item">
+                    <div class="item_image">
+                      <img src="images/thumbnail-3.jpg" alt="cart" />
+                    </div>
+                    <div class="text_item">
+                      <a href="" class="item_title">آبمیوه</a>
+                      <span class="price_item">15,000 * 2</span>
+                    </div>
+                    <span class="btn_remove_item"
+                      ><i class="fa fa-times"></i
+                    ></span>
+                  </div>
+                </div>
+                <div class="cart_price">
+                  <span class="title_price">قیمت کل</span>
+                  <span class="price">72,000 تومان</span>
+                </div>
+                <div class="btn_view_cart">
+                  <a href="#">مشاهده و پرداخت</a>
+                </div>
+              </div>
+            </div>
+            <div class="user_account">
+              <!-- <div class="user_item">
+                <i class="fa fa-user"></i>
+                <div class="user_dropdown">
+                  <ul class="user_link">
+                    <li>
+                      <i class="fa fa-user-alt icon_user"></i>
+                      <a href="account.html">حساب من</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-sign-out-alt icon_user"></i>
+                      <a href="#">خروج</a>
+                    </li>
+                  </ul>
+                </div>
+              </div> -->
+              <a href="register.html" class="register_login"><i class="fas fa-sign-in-alt"></i></a>
+            </div>
+        </div>
         </div>
       </div>
     </header>
@@ -338,6 +424,7 @@
     <!-- footer end -->
 
     <!-- script js -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

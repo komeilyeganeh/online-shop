@@ -55,6 +55,12 @@ var flktyRelated = new Flickity( '.related_product_carousel', {
   cellAlign: 'right'
 });
 
+// ===== categories dropdown
+let btnCategory = document.querySelector(".categories");
+btnCategory.addEventListener("click", () => {
+  btnCategory.classList.toggle("active");
+});
+
 // ===== text overflow - title products
 let titleProducts = document.querySelectorAll(".product_title a");
 titleProducts.forEach((e) => {

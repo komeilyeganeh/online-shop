@@ -416,10 +416,17 @@ form .btn_search .fa-search {
   transition: all 0.3s ease-out;
   z-index: 2000;
 }
-.categories:hover .categories_dropdown {
+.categories.active .categories_dropdown {
   visibility: visible;
   opacity: 1;
   top: 100%;
+}
+.categories i.fa-chevron-down{
+  transition: all .2s ease-out;
+  margin-right: .5rem;
+}
+.categories.active i.fa-chevron-down{
+  transform: rotate(180deg);
 }
 .categories_dropdown ul {
   display: flex;
